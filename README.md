@@ -1,20 +1,48 @@
-##🔍 Insights y Posibles Análisis a Realizar
+# Análisis de Datos sobre Trabajo Remoto
 
-1) 1️⃣ Limpieza y Tratamiento de Datos
+## Descripción
+Este proyecto analiza datos sobre el trabajo remoto, explorando la distribución de variables, transformaciones de datos y correlaciones entre variables. Se utilizan herramientas de procesamiento de datos, visualización y transformación para obtener insights significativos.
 
-    Hay valores nulos en Mental_Health_Condition (23.92%) y Physical_Activity (32.58%).
+## Estructura del Proyecto
+```
+RemoteWork/
+│── Data/
+│   ├── Raw/  # Datos originales
+│   ├── CleanData/  # Datos limpios y transformados
+│── Results/  # Resultados de análisis y visualizaciones
+│── Scripts/
+│   ├── analisis_1.py  # Exploración y limpieza de datos
+│   ├── analisis_2.py  # Análisis exploratorio y transformación de variables
+│── utils.py  # Funciones auxiliares
+│── README.md  # Documentación del proyecto
+```
 
-    Ambas variables son significativas que poseean valores nulos ya que significa ausencia de la enfermedad , y ausencua de actividad fisica. 
+## Requisitos
+Para ejecutar este proyecto, necesitas instalar las siguientes librerías:
+```bash
+pip install pandas numpy seaborn matplotlib scikit-learn
+```
+
+## Uso
+### 1. Exploración y Limpieza de Datos (`analisis_1.py`)
+- Carga los datos crudos desde `Remote_Work.csv`
+- Realiza un análisis exploratorio básico (tamaño del dataset, tipos de datos, valores nulos, distribución de variables categóricas)
+- Realiza limpieza de datos (imputación de valores nulos)
+- Guarda los datos limpios en `Remote_Work_Clean.csv`
+
+### 2. Análisis Exploratorio y Transformación (`analisis_2.py`)
+- Carga los datos limpios desde `Remote_Work_Clean.csv`
+- Clasifica variables en numéricas, categóricas y ordinales
+- Visualiza distribuciones de variables numéricas, categóricas y ordinales
+- Transforma variables categóricas (One-Hot Encoding) y ordinales (Label Encoding)
+- Guarda los datos transformados en `Remote_Work_TransformVars.csv`
+- Genera una matriz de correlación y visualiza las relaciones entre variables
+
+## Resultados
+Los resultados incluyen:
+- Visualizaciones de distribución de datos (`Results/`)
+- Dataset limpio y transformado (`CleanData/`)
+- Matriz de correlación de variables
 
 
 
-numeric_vars = ['Age', 'Years_of_Experience', 'Hours_Worked_Per_Week', 'Number_of_Virtual_Meetings']
-categorical_vars = ['Gender', 'Job_Role', 'Industry', 'Work_Location', 'Mental_Health_Condition', 
-                    'Access_to_Mental_Health_Resources', 'Productivity_Change', 'Region']
-ordinal_vars = ['Stress_Level', 'Satisfaction_with_Remote_Work', 'Physical_Activity', 
-                'Sleep_Quality', 'Work_Life_Balance_Rating', 'Social_Isolation_Rating', 'Company_Support_for_Remote_Work']
-
-
-GRAFICOS PARA VER LA DISTRIBUCION
-
-2) MODIFICACION DE VARIABLES, DE CATEGORIAS/ ORDINALES A NUMERICAS
