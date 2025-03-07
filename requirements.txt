@@ -1,0 +1,13 @@
+#pip install -r requirements.txt
+
+numpy
+pandas
+matplotlib
+seaborn
+joblib
+scikit-learn
+pandas
+scipy
+numpy
+plotly
+statsmodels
